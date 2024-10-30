@@ -3,19 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title class="font-monospace">OneWorld Products</title>
     <link rel="stylesheet" href="output.css">
 	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+	<link rel="icon" href="Pictures/IMG-20241029-WA0009-removebg-preview.png" type="image/icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-200">
+<body class="bg-gray-200 ">
       <!-- NavBars -->
-	   <div class="w-full h-20 bg-gray-100 shadow-sm ">
-           <nav class="flex justify-between px-20 py-6">
+	   <div class="w-full h-20 bg-gray-200 shadow-sm ">
+           <nav class="flex justify-between px-12 py-6  ">
                  <!-- Hambuger and Logo -->
-				  <div class="flex">
-					<i class="fa-solid fa-bars text-2xl"></i>
+				  <div class="flex space-x-10">
+					<i class="fa-solid fa-bars text-2xl mt-1" id="bars"></i>
+					<div class="flex ">
+						<img src="Pictures/IMG-20241029-WA0009-removebg-preview.png" alt="" width="70px" height="40px" class="-mt-1.5">
+						<p class="text-2xl font-spline -pl-5 cursor-pointer mt-1 ">OneWorld</p>
+					</div>
+					
+					   <div class="space-x-10  mt-3">
+						<a href="" class="font-spline font-semibold text-[15px] text-slate-950 hover:text-red-500 hover:underline">Woman</a>
+						<a href="" class="font-spline font-semibold text-[15px] text-slate-950  hover:text-red-500 hover:underline">Man</a>
+						<a href="" class="font-spline font-semibold text-[15px] text-slate-950  hover:text-red-500 hover:underline">Children</a>
+					   </div>
+					   <div class="mt-1">
+						<form class="flex">
+							<div class="relative flex-grow">
+								<input type="text" placeholder="Search..." class="w-full px-4 py-1 pl-10 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+								<div class="absolute inset-y-0 left-0 flex items-center pl-3">
+									<i class="fas fa-search text-gray-400"></i>
+								</div>
+							</div>
+							<button type="submit" class="px-4 py-1 bg-slate-950 text-white font-semibold rounded-r-md hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+								Search
+							</button>
+						</form>
+						</div>
 				  </div>
-		   </nav>
+				  
+				  <li class="flex items-center py-2 px-3 hover:bg-slate-300 rounded-md transition duration-200 font-semibold ">
+					<i class="fas fa-user text-gray-500 mr-3"></i>
+					<a href="" class="text-slate-950 font-semibold ">Account</a></li>
+
+					<li class="flex items-center py-2 px-4 hover:bg-slate-300 rounded-md transition duration-200 ">
+						<i class="fa-solid fa-cart-shopping text-gray-500 mr-3 mt-0.5"></i>
+						<a href="" class="text-slate-950  font-semibold ">Cart</a>
+				</li>
+                </nav>
 	   </div>
 	  
     
