@@ -2,10 +2,313 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="font-monospace">OneWorld Products</title>
+    <link rel="stylesheet" href="output.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+	<link rel="icon" href="Pictures/IMG-20241029-WA0009-removebg-preview.png" type="image/icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<style>
+	  .slide {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+		@keyframes bounce {
+		0%, 20%, 50%, 80%, 100% {
+			transform: translateY(0);
+		}
+		40% {
+			transform: translateY(-50px);
+		}
+		60% {
+			transform: translateY(-25px);
+		}
+	}
+	.bouncing-circle {
+		animation: bounce 5s infinite;
+		
+	}
+</style>
 </head>
-<body>
+<body class="bg-gray-200">
+ <!-- NavBars -->
+ <div class="w-full h-20 bg-gray-200 shadow-sm">
 	
+	<nav class="hidden md:flex lg:flex xl:flex justify-between  px-24 py-6  ">
+		  <!-- Hambuger and Logo -->
+		   <div class="flex space-x-6 ">
+			<i class=" fa-solid fa-bars text-2xl mt-1" id="dis" onclick="ham()" ></i>
+			 <div class="flex ">
+				 <img src="Pictures/IMG-20241029-WA0009-removebg-preview.png" alt="" width="70px" height="40px" class="-mt-1.5">
+				 <p class="text-2xl font-spline -pl-1 cursor-pointer mt-1 ">OneWorld</p>
+			 </div>
+			 </div>
+
+			 <div class="hidden md:flex lg:flex xl:flex space-x-3  mt-3">
+				<a href="" class="font-spline font-semibold text-[13px] text-slate-950 hover:text-red-500 hover:underline">Woman</a>
+				<a href="" class="font-spline font-semibold text-[13px] text-slate-950  hover:text-red-500 hover:underline">Man</a>
+				<a href="" class="font-spline font-semibold text-[13px] text-slate-950  hover:text-red-500 hover:underline">Children</a>
+			   </div>
+			   <div class="mt-1">
+				<form class="sm:hidden md:flex">
+					<div class="relative flex-grow">
+						<input type="text" placeholder="Search..." class="w-full px-4 py-1 pl-10 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+						<div class="absolute inset-y-0 left-0 flex items-center pl-3">
+							<i class="fas fa-search text-gray-400"></i>
+						</div>
+					</div>
+					<button type="submit" class="px-4 py-1 bg-slate-950 text-white font-semibold rounded-r-md hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+						Search
+					</button>
+				</form>
+				</div>
+				
+				<li class="flex items-center py-2 px-3 hover:bg-slate-300 rounded-md transition duration-200 font-semibold -ml-20">
+					<i class="fas fa-user text-gray-500 mr-3"></i>
+					<a href="" class="text-slate-950 font-semibold ">Account</a></li>
+		
+					<li class="flex items-center py-2 px-4 hover:bg-slate-300 rounded-md transition duration-200 -ml-28">
+						<i class="fa-solid fa-cart-shopping text-gray-500 mr-3 mt-0.5"></i>
+						<a href="" class="text-slate-950  font-semibold ">Cart</a>
+				</li>
+		  </div>
+		  </nav>
+	       <div class="px-72 mt-28">
+			<div class="flex relative">
+				<div class="bouncing-circle bg-yellow-500 rounded-full w-[250px] h-[250px]"></div>
+				<div class="slide active  -ml-60">
+                <img src="Pictures/1000451849.png" alt="" width="230px" height="50px" class="absolute -mt-16 ml-32" id="image1" >
+				     </div> 
+					 <div class="slide">
+						<img src="Pictures/1000451850.png" alt="" width="400px" height="50px" class="absolute -ml-52 -mt-24" id="image2">
+					</div>
+					<div class="slide">
+						<img src="Pictures/1000451851.png" alt="" width="320px" height="50px" class="absolute -ml-40 -mt-40" id="image3">
+					</div>
+			
+				 </div>
+			</div>
+         </div>
+		 <button class=" absolute flex items-center justify-center w-12 h-12 bg-white border rounded-full shadow-md focus:outline-none ml-[660px] mt-[-200px]" id="magnify" onclick="zoom()">
+			<svg class="w-6 h-6 text-gray-600 hover:text-gray-800 hover:scale-125 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+			</svg>
+		</button>
+
+		 <button class="absolute top-1/2 left-56 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" onclick="plusSlides(-1)">❮</button>
+		 <button class="absolute top-1/2 right-[630px] transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" onclick="plusSlides(1)">❯</button>
+ <!-- 2nd Hero Section -->
+ <div class="flex-col space-y-3 ml-[800px] -mt-[300px]">
+	<p class="text-[purple] text-[13px] font-[helvetica] font-semibold">New Backpack</p>
+	<div class="grid grid-rows-2">
+		<p class="text-teal-950 text-[14px] font-Spline font-bold">SOLID BASIC BACKPACK</p>
+		<p class="text-8xl text-slate-900 opacity-10 -ml-2 -mt-10">BACK</p>
+	</div>
+		 <div class="flex space-x-6 " >
+			<div class="bg-yellow-500 w-[60px] h-[6px] rounded-full"></div>
+			<div class="bg-green-500 w-[60px] h-[6px] rounded-full"></div>
+			<div class="bg-red-600 w-[60px] h-[6px] rounded-full"></div>
+		 </div>
+		 <p class="text-teal-950 text-[20px] font-[helvetica] font-bold">$1500</p>
+		 <button class="py-3 px-4 bg-green-500 rounded-full w-[120px] h-[40px] flex text-center hover:bg-black" type="submit">
+			<i class="fa-solid fa-cart-shopping text-[12px] mr-3 mt-0.5 text-left text-white"></i>
+			<a class="text-[white] text-[9px] font-spline font-semibold mt-0.5 -ml-0.5">ADD TO CART</a>
+		 </button>
+		 <p class="text-teal-950 font-spline text-[10px] font-semibold">Reference Code: 12345678900</p>
+
+		 <p class="text-teal-950 font-spline text-[11px] font-light ">Lorem ipsum dolor sit,<br> amet consectetur adipisicing elit.
+			 Temporibus<br> cum obcaecati in labore vel optio <br>voluptate voluptates culpa,
+			!</p>
+  </div>
+</div>
+<div class="px-60 mt-16">
+	<div class="grid grid-cols-3 gap-x-20">
+		<div class="flex space-x-2">
+			<div class="bg-white  rounded-full px-5 py-5 w-[80px] h-[80px] text-center shadow-lg">
+				<img src="Pictures/download__6_-removebg-preview.png" alt="securepayment" width="200px" height="200px">
+			</div>
+			<a class="text-slate-800 mt-8 font-semibold text-[13px]" href="">Secure Payment</a>
+		</div>
+		
+		<div class="flex space-x-2">
+			<div class="bg-white  rounded-full px-5 py-5 w-[80px] h-[80px] shadow-lg">
+				<img src="Pictures/images__5_-removebg-preview.png" alt="securepayment" width="150px" height="150px">
+			</div>
+			<a class="text-slate-800 mt-8 font-semibold text-[13px]"  href="">Fast Delivery</a>
+		</div>
+		<div class="flex space-x-2">
+			<div class="bg-white rounded-full px-5 py-5 w-[80px] h-[80px] shadow-lg">
+				<img src="Pictures/download__7_-removebg-preview.png" alt="securepayment" width="150px" height="150px">
+			</div>
+			<a class="text-slate-800 mt-8 font-semibold text-[13px]" href="">Onilne Payment</a>
+		</div>
+	</div>
+     </div>
+
+	 <div class="relative mt-12 px-60 ">
+		<p class="text-8xl text-slate-900 opacity-10">GOODS</p>
+		<p class="text-2xl text-slate-900 relative -mt-14 ml-1 font-mono font-semibold" >Goods for you</p>
+		<div class="flex justify-between space-x-8 absolute -mt-24 ml-[600px]">
+		
+	   </div>
+		
+	   <!--  -->
+	   <div class="mt-12 grid grid-cols-3 px-6 gap-10 -ml-2 ">
+		<div class="bg-red-100 h-72 w-60 rounded flex-col space-y-8 py-4 px-auto text-center hover:translate-y-6">
+		<p class="font-semibold text-[14px] text-red-500 font-[helvetica]  ">School Bag</p>
+		<div class="flex-col space-y-2 text-center ml-20">
+			<img src="Pictures/1000451849.png" alt="" class="" width="85px" height="50px">
+			<div class="bg-[#480b0b] w-[60px] h-[30px] rounded-full ml-3  text-center text-white text-[10px] py-2">
+					 <p>$1500</p>
+			</div>
+			<div class="flex space-x-2 ml-6 mt-6 pt-2">
+				<div class="bg-orange-500 rounded-full w-2 h-2"></div>
+				<div class="bg-red-300 rounded-full w-2 h-2"></div>
+				<div class="bg-violet-300 rounded-full w-2 h-2"></div>
+			</div>
+		</div>
+		</div>
+
+		<div class="bg-gray-400 h-72 w-60 rounded flex-col space-y-8 py-4 px-auto text-center hover:translate-y-6">
+			<p class="font-semibold text-[14px] text-orange-500 font-[helvetica]  ">School Bag</p>
+			<div class="flex-col space-y-2 text-center ml-20">
+				<img src="Pictures/1000451849.png" alt="" class="" width="85px" height="50px">
+				<div class="bg-orange-400 w-[60px] h-[30px] rounded-full ml-3  text-center text-white text-[10px] py-2">
+						 <p>$1500</p>
+				</div>
+				<div class="flex space-x-2 ml-6 mt-6 pt-2">
+					<div class="bg-orange-500 rounded-full w-2 h-2"></div>
+					<div class="bg-red-300 rounded-full w-2 h-2"></div>
+					<div class="bg-violet-300 rounded-full w-2 h-2"></div>
+				</div>
+			</div>
+		</div>
+		<div class="bg-slate-300 h-72 w-60 rounded flex-col space-y-8 py-4 px-auto text-center hover:translate-y-6">
+			<p class="font-semibold text-[14px] text-purple-500 font-[helvetica]  ">School Bag</p>
+			<div class="flex-col space-y-2 text-center ml-20">
+				<img src="Pictures/1000451849.png" alt="" class="" width="85px" height="50px">
+				<div class="bg-purple-500 w-[60px] h-[30px] rounded-full ml-3  text-center text-white text-[10px] py-2">
+						 <p>$1500</p>
+				</div>
+				<div class="flex space-x-2 ml-6 mt-6 pt-2">
+					<div class="bg-orange-500 rounded-full w-2 h-2"></div>
+					<div class="bg-red-300 rounded-full w-2 h-2"></div>
+					<div class="bg-violet-300 rounded-full w-2 h-2"></div>
+				</div>
+			</div>
+		</div>
+		</div>
+      </div>
+
+	  <footer class="mt-12 bg-black w-full h-[300px]">
+		<div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info Section -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-4 text-white cursor-pointer">Company</h2>
+                    <p class="text-gray-400 cursor-pointer ">Your Company Name</p>
+                    <p class="text-gray-400 cursor-pointer">123 Address St.</p>
+                    <p class="text-gray-400 cursor-pointer">City, State, Zip</p>
+                    <p class="text-gray-400 cursor-pointer">Email: support@example.com</p>
+                    <p class="text-gray-400 cursor-pointer">Phone: +1 (234) 567-890</p>
+                </div>
+                <!-- Quick Links Section -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-4 text-white cursor-pointer">Quick Links</h2>
+                    <ul>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shop</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Customer Service Section -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-4 text-white cursor-pointer">Customer Service</h2>
+                    <ul>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Return Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media Section -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-4 text-white cursor-pointer">OneWorld</h2>
+                    <div class="flex space-x-4">
+                        
+						<a href="#" class="text-gray-400 hover:text-white font-[sans]">
+							<img src="Pictures/IMG-20241029-WA0009-removebg-preview.png" alt="" width="50px" height="20px" class="-mt-12 ml-20">
+                        </a>
+    
+					</div>
+				</div>
+	
+					<a class="text-white  text-[13px] mt-2" href="">&copy;&nbsp;Copyright Codeweb 2024</a>
+					<a class="text-white  text-[13px] -ml-16 mt-2" href="">Terms & Condition</a>
+					 <li class="-ml-44 mt-2 ">
+						<button class="absolute" type="submit">
+							<i class="fa-solid fa-arrow-right absolute ml-52 mt-1"></i>
+						</button>
+						
+						<input type="email" name="" id="" class="rounded px-3 pr-8 text-black placeholder:text-gray-500 w-[230px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Email">
+					 </li>
+				
+			
+				
+			</div>
+			    
+	   </footer>
+
+			
+
+		 <script>
+			let slideIndex = 0;
+			showSlides(slideIndex);
+	
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+	
+			function showSlides(n) {
+				const slides = document.getElementsByClassName("slide");
+				if (n >= slides.length) { slideIndex = 0; }
+				if (n < 0) { slideIndex = slides.length - 1; }
+				for (let i = 0; i < slides.length; i++) {
+					slides[i].classList.remove("active");
+				}
+				slides[slideIndex].classList.add("active");
+			}
+
+			
+			var dis = document.getElementById("dis");
+			function ham(){
+				dis.classList.toggle("fa-x");
+			}
+
+
+			const image1 = document.getElementById("image1")
+			const image2 = document.getElementById("image2")
+			const image3 = document.getElementById("image3")
+			function zoom() {
+			       image1.classList.toggle("w-[270px]");
+				   image1.classList.toggle("h-[350px]");
+				   image2.classList.toggle("w-[450px]");
+				   image2.classList.toggle("h-[400px]");
+				   image3.classList.toggle("w-[350px]");
+				   image3.classList.toggle("h-[500px]");
+				   
+                  }
+		</script> 
+	 
 </body>
 </html>
