@@ -5,8 +5,206 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        input:hover {
+            border-color: dodgerblue;
+        }
+        #one{
+            box-shadow: 50px 50px 100px rgba(255, 192, 203, 0.11), 0px 10px 30px rgba(128, 128, 128, 0.541), 50px 50px 100px rgba(255, 192, 203, 0.363), 50px 50px 200px rgb(255, 192, 203)
+            
+        }
+        #two{
+            width: 40px;
+        }
+    </style>
 </head>
-<body class="bg-slate-400">
+
+<body>
+    <nav class="h-16 bg-white flex items-center justify-between px-[10rem] border-b">
+        <div class="flex">
+            <img src="dinary.jpg" alt="" class="h-[40px] rounded-2xl w-[40px]">
+            <div class=" w-[2px] bg-gray-200 h-[40px] ml-[40px]"></div>
+            <ul class=" flex items-center  ml-[20px]">
+                <li> <a href="#" class="text-lg text-gray-500 font-semibold ml-8">NEW</a>
+                </li>
+                <li> <a href="#" class="text-lg text-gray-500 font-semibold ml-8">CLOTHES</a>
+                </li>
+                <li> <a href="#" class="text-lg text-gray-500 font-semibold ml-8">SHOES</a>
+                </li>
+                <li> <a href="#" class="text-lg text-red-500 font-semibold  ml-8">SALE</a>
+                </li>
+                <li> <a href="#" class="text-lg text-gray-500 font-semibold ml-8">STOCK</a>
+                </li>
+            </ul>
+            
+            <!-- CTA DIV -->
+            </div>
+            <div class="flex relative items-center">
+                <input type="text" placeholder="search" class="h-[40px] w-[250px] border-[2.5px] border-gray-300 rounded-lg
+                pl-4 text-lg font-semibold mr-[150px]">
+                <i class="fa fa-search text-gray-500 relative right-[180px]" aria-hidden="true"></i>
+                <i class="fas fa-heart text-gray-500 relative right-[130px]" aria-hidden="true"></i>
+                <i class="fas fa-regular-o fa-message text-gray-500 relative right-[80px]"></i>
+                <img src="Screenshot_2024-02-02-16-16-31-115_com.miui.gallery.jpg" alt="" class="h-[40px] w-[40px] rounded-[20px]">
+            </div>
+        
+    </nav>
+    <!-- <aside>
+        
+    </aside> -->
+    <aside>
+        <i class="fa fa-arrow-left ml-[170px] mt-[70px]" aria-hidden="true"></i>
+        <p class="text-[40px] font-semibold absolute left-[190px] top-[105px]">Checkout</p>
+        <form action="">
+            <div class="h-[800px] w-[700px] ml-[170px] mt-[60px] flex flex-col bg-white">
+                <h3 class="font-semibold text-lg font-serif text-gray-500">1. contact information</h3>
+                <div class="flex justify-between mt-[25px]">
+                    <div>
+                        <div> <label for="" class="text-gray-500 text-sm font-bold">FIRSTNAME</label></div>
+                        <div><input type="text"
+                                class="border-gray-300 border-[2px] h-[40px] w-[300px] rounded-lg mt-[10px] text-gray-800 font-semibold">
+                        </div>
+                    </div>
+                    <div>
+                        <div><label for="" class="text-gray-500 text-sm font-bold">LASTNAME</label></div>
+                        <div><input type="text"
+                                class="border-gray-300 border-[2px] h-[40px] w-[300px] rounded-lg mt-[10px] text-gray-800 font-semibold">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between mt-[25px]">
+                    <div>
+                        <div> <label for="phone" class="text-gray-500 text-sm font-bold">PHONE</label></div>
+                        <div><input type="phone"
+                                class="border-gray-300 border-[2px] h-[40px] w-[300px] rounded-lg mt-[10px] text-gray-800 font-semibold">
+                            <i class="fas fa-check-o"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <div><label for="email" class="text-gray-500 text-sm font-bold">E-MAIL</label></div>
+                        <div><input type="email"
+                                class="border-gray-300 border-[2px] h-[40px] w-[300px] rounded-lg mt-[10px] text-gray-800 font-semibold">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg text-gray-500 font-serif mt-[40px]">2. Delivery Method</h3>
+
+                    <div class="flex flex-row mt-[30px]">
+                        <img src="store.png" alt="" class="h-[20px] w-[20px] mt-[30px] absolute left-[190px]">
+                        <div><input type="text" placeholder="Store"
+                                class="bg-gray-100 border-none h-[60px] w-[150px] rounded-2xl mt-[10px] text-black pl-[60px] text-lg">
+                        </div>
+                        <div><input type="text" placeholder="Delivery"
+                                class="bg-gray-100 border-none h-[60px] w-[150px] rounded-2xl mt-[10px] ml-[10px] text-gray-800 pl-[60px] text-lg">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex flex-row justify-between mt-[30px]">
+                    <div>
+                        <div> <label for="" class="text-gray-500 text-sm font-bold">DELIVERY DATE</label></div>
+                        <div><input type="datetime-local"
+                                class="p-[20px] border-gray-300 border-[2px] h-[40px] w-[300px] rounded-lg mt-[10px] text-gray-800 font-bold">
+                        </div>
+                    </div>
+                    <div>
+                        <div><label for="" class="text-gray-500 text-sm font-bold">CONVINIENT TIME</label></div>
+                        <div><input type="time"
+                                class="p-[20px] border-gray-300 border-[2px] h-[40px] w-[300px] rounded-lg mt-[10px] text-gray-800 font-bold">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-row justify-between mt-[30px]">
+                    <div>
+                        <div> <label for="" class="text-gray-500 text-sm font-bold">CITY</label></div>
+                        <div><select name="" id=""
+                                class="p-[20px] border-gray-300 border-[2px] h-[40px] w-[200px] rounded-lg mt-[10px] text-gray-800 font-bold">
+                                <option value="" class=""></option>
+                            </select></div>
+                    </div>
+                    <div>
+                        <div><label for="" class="text-gray-500 text-sm font-bold">ADDRESS</label></div>
+                        <div><input type="address"
+                                class="p-[20px] border-gray-300 border-[2px] h-[40px] w-[200px] rounded-lg mt-[10px] text-gray-800 font-bold">
+                        </div>
+                    </div>
+                    <div>
+                        <div><label for="" class="text-gray-500 text-sm font-bold">ZIP CODE</label></div>
+                        <div><input type="zip code"
+                                class="p-[20px] border-gray-300 border-[2px] h-[40px] w-[200px] rounded-lg mt-[10px] text-gray-800 font-bold">
+                        </div>
+                    </div>
+                </div>
+                <h3 class="font-semibold text-lg text-gray-500 font-serif mt-[40px]">3. Payment Method</h3>
+                <div class="flex" class="three">
+                    <img src="master card.png" alt="" class="h-20 ml-16">
+                    <img src= "visa (1).png" alt="" class="h-20 ml-16">
+                    <img src= "apple-pay.png" alt="" class="h-20 ml-16">
+                    <div><input type="address"
+                            class="bg-gray-100 p-[30px] border-gray-300 border-[2px] h-[60px] w-[130px] rounded-2xl mt-[10px] text-gray-800 font-bold ml-16"
+                            placeholder="Other"></div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </form>
+    </aside>
+   <aside class="absolute right-[150px] top-[100px] h-[880px] w-[350px] p-8 pl-12" id="one">
+        <h1 class="font-semibold text-3xl">order</h1>
+        <img src="jersey.jpg" alt="" class="mt-16">
+        <h1 class="font-bold text-[28px] font-Ariel mt-4">
+            Nike Sportswear Men's T-Shirt
+        </h1>
+       <div class="flex mt-4">
+        <p class="font-semibold text-gray-500 text-[12px]">
+            SIZE:
+        </p>
+        <select name="" id="two" class="font-bold ml-4 text-sm">
+            <option value="">xl</option>
+            <option value="">md</option>
+            <option value="">lg</option>
+            <option value="">sm</option>
+            <option value="">2xl</option>
+        </select>
+        <p class="font-semibold text-gray-500 ml-8 text-[12px]">
+            COLOR: 
+        </p>
+        <p class="font-bold ml-4 text-sm">Red</p>
+       </div>
+      <div class="flex mt-4">
+        <h3 class="font-semibold text-gray-500 text-[12px]">$139</h3>
+      <h2 class="font-semibold text-red-500 ml-4 mt-[-4px]">$69</h2>
+    </div>
+   <div class="h-[2px] w-200px bg-gray-300 mt-8"></div>
+    <div class="mt-[10px]">
+        <div class="flex">
+            <p class="font-semibold text-gray-500 ml-8 text-[12px]">SUBTOTAL</p>
+            <h3 class="font-bold ml-28 text-sm">$139</h3>
+              </div>
+              <div class="flex mt-[10px]">
+            <p class="font-semibold text-gray-500 ml-8 text-[12px]">DISCOUNT (50% OFF) </p>
+            <h3 class="font-bold ml-12 text-sm">-$70</h3>
+              </div>
+              <div class="flex mt-[10px]">
+            <P class="font-semibold text-gray-500 ml-8 text-[12px]">SHIPPING</P>
+            <h3 class="font-bold ml-28 text-sm">Free</h3>
+              </div>
+    </div>
+          <div class="h-[2px] w-200px bg-gray-300 mt-4"></div>
+         <div class="flex mt-[28px]">
+            <p class="font-semibold text-xl">TOTAL</p>
+            <p class="font-semibold text-xl ml-32">$69</p>
+         </div>
+         <button class="bg-blue-800 h-[40px] w-[220px] rounded-[20px] text-white font-Ariel mt-4" onclick="valid()">Checkout
+        <i class="fas fa-arrow-right m-4"></i>
+        </button>
+         <p class="text-[13px] mt-4">by confirmng the order, I accept the <a href="">terms of the user</a> aggreement</p>
+
+   </aside>
     
 </body>
 </html>
